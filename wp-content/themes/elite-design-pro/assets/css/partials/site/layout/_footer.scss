@@ -1,0 +1,190 @@
+.footer-logo {
+	line-height: 0.65;
+	margin-bottom: 9.5rem;
+	max-width: 202px;
+
+	a,
+	a:visited {
+		border: none;
+		display: inline-block;
+	}
+}
+
+.footer-menu-widgets {
+	margin-bottom: 57px;
+}
+
+.footer-widget {
+	width: 40%;
+	margin-right: 20%;
+
+	&:nth-child(2) {
+		margin-right: 0;
+	}
+}
+
+.footer-nav {
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 0;
+			margin: 0 0 2rem;
+			list-style-type: none;
+
+			a,
+			a:visited {
+
+				@include font-size(2.4);
+
+				line-height: 1.2;
+				position: relative;
+				display: inline-block;
+			}
+
+			&.current-menu-item > a,
+			&.current-menu-parent > a,
+			a:hover {
+				border: 0;
+			}
+		}
+
+		ul {
+			padding: 2rem 0 1rem;
+
+			li {
+				display: block;
+				margin: 0 0 14px;
+				padding: 0 15px;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.legal-nav {
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+
+		li {
+			margin-bottom: 0;
+			margin-left: 3rem;
+
+			a,
+			a:visited {
+				position: relative;
+				display: inline-block;
+				font-size: 24px;
+			}
+
+			&.current-menu-item a {
+
+				&::after {
+					transform-origin: bottom left;
+					transform: scaleX(1);
+				}
+			}
+
+			&:first-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+footer {
+
+	.wrapper {
+		max-width: 1350px;
+	}
+}
+
+.cta-ctn {
+	padding: 52px 55px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	margin-bottom: 75px;
+
+	h4 {
+		color: map-get($map: $colors, $key: white);
+		margin-bottom: 0;
+		width: 80%;
+	}
+}
+
+.footer-left {
+	width: 34%;
+	margin-right: 7%;
+}
+
+.footer-right {
+	width: 42%;
+}
+
+.site-socials {
+
+	ul {
+		margin: 36px 0 0;
+
+		li {
+			margin: 0 30px 0 0;
+			line-height: 1;
+
+			img {
+				filter: invert(99%) sepia(1%) saturate(2921%) hue-rotate(307deg) brightness(127%) contrast(100%);
+			}
+		}
+	}
+}
+
+.elitedesign-contact {
+
+	a,
+	a:visited {
+	}
+
+	.big-body {
+		margin-bottom: 10px;
+	}
+}
+
+.footer-ctn {
+	margin-bottom: 190px;
+}
+
+.footer-bottom {
+	padding-bottom: 50px;
+}
+
+.copyright-area {
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// .animated-hover {
+
+// 	ul li a,
+// 	a {
+// 		background-clip: text;
+// 		-webkit-text-fill-color: transparent;
+// 		background-image: linear-gradient(to right, #ff2500, #ff2500 50%, #fff 50%);
+// 		background-size: 200% 100%;
+// 		background-position: 100%;
+
+// 		&:hover {
+// 			transition: background 0.4s cubic-bezier(0.215, 0, 0, 0.995);
+// 			background-position: 0%;
+// 		}
+// 	}
+// }

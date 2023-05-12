@@ -1,0 +1,31 @@
+.tct-column {
+	background-color: map-get( $map: $colors, $key: white );
+	color: map-get($map: $colors, $key: black);
+	@include padding(45px 30px);
+	text-align: center;
+	border-radius: 20px;
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.text-column {
+
+	@include padding(0 5% 0 0);
+
+	h3 {
+		margin-bottom: 25px;
+	}
+
+	&:nth-child(n + 3) {
+		margin-top: 60px;
+	}
+
+	p {
+		width: 90%;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

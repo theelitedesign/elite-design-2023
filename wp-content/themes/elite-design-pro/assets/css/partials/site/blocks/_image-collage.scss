@@ -1,0 +1,21 @@
+.image-collage-ctn {
+	row-gap: 36px;
+
+	@include padding(18.5rem 0 0 0);
+}
+
+.collage-image {
+	height: 430px;
+
+	&:nth-child(3n + 1) {
+		margin-top: -8.5rem !important;
+	}
+
+	&:nth-child(3n + 2) {
+		margin-top: 0 !important;
+	}
+
+	&:nth-child(3n+3) {
+		margin-top: -18.5rem !important;
+	}
+}

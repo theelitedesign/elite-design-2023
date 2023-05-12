@@ -1,0 +1,22 @@
+.single-text-col {
+	padding: 70px 49px;
+	box-sizing: border-box;
+	background-color: map-get($map: $colors, $key: white);
+	color: map-get($map: $colors, $key: black);
+	border-radius: 20px;
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	&:nth-child(2n + 2) {
+		margin-top: -240px;
+	}
+}
+
+.two-col-head {
+	width: 49.2%;
+}
+
+.two-cols-text {
+	row-gap: 20px;
+}

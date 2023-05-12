@@ -1,0 +1,14 @@
+.single-proccess {
+	padding: 30px 43px;
+	line-height: 1;
+	box-sizing: border-box;
+	color: map-get($map: $colors, $key: black);
+	background-color: map-get($map: $colors, $key: bwhale);
+	@include font(bt,bold);
+	@include border-radius(20px);
+	font-size: 34px;
+	position: relative;
+	&:nth-child(n + 3) {
+		margin-top: 36px;
+	}
+}

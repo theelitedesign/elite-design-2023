@@ -1,0 +1,34 @@
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Do not edit these styles
+------------------------------------------------- */
+
+body {
+	position: relative;
+}
+
+/* -------------------------------------------------
+>> Project Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+body {
+
+	@include font(bt, reg);
+	@include font-size(2);
+
+	background-color: map-get($map: $colors, $key: black);
+	color: map-get($map: $colors, $key: white);
+	line-height: 1.6;
+}
+
+p {
+	margin: 0 0 3rem;
+}
+
+::selection {
+	color: map-get($map: $colors, $key: black);
+	background-color: map-get($map: $colors, $key: yellow);
+}

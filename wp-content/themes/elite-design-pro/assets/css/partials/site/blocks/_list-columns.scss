@@ -1,0 +1,19 @@
+.list-column {
+	@include padding(55px);
+	@include border-radius(10px);
+	background-color: rgba(255,255,255,0.03);
+
+	ul {
+		margin: 40px 0 0;
+		li {
+			font-size: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&:nth-child(n + 3) {
+		margin-top: 20px;
+	}
+}

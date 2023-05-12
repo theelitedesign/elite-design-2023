@@ -1,0 +1,40 @@
+.single-price-plan {
+
+	@include padding(45px 30px);
+
+	h3 {
+		margin-bottom: 20px;
+	}
+}
+
+.single-price-plan {
+
+	background-color: map-get($map: $colors, $key: white);
+	color: map-get($map: $colors, $key: black);
+	border-radius: 20px;
+
+	ul {
+		margin: 0;
+
+		li {
+			padding: 0;
+			margin: 0;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+.black {
+	color: map-get( $map: $colors, $key: black );
+}
+
+.plan-desc {
+	margin: 35px 0;
+}
+
+.pricing-cols.flexarea {
+	align-items: center;
+}

@@ -1,0 +1,87 @@
+.projects-area {
+	width: 292%;
+	display: flow-root;
+}
+
+a.project-image,
+a.project-image:visited {
+	height: 373px;
+	margin-bottom: 30px;
+	display: block;
+	border: 0;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: map-get($map: $colors, $key: red15);
+		transition: all 0.3s ease-in-out;
+		opacity: 0;
+	}
+
+	&:hover {
+
+		&::before {
+			opacity: 1;
+		}
+	}
+}
+
+.single-project {
+	width: 39%;
+	max-width: 512px;
+	float: left;
+	margin-right: 40px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.project-desc {
+
+	h3 {
+		margin-bottom: 20px;
+
+		a,
+		a:visited {
+
+			color: map-get($map: $colors, $key: white);
+			border-bottom: 0;
+
+			&:hover {
+				color: map-get($map: $colors, $key: red);
+			}
+		}
+	}
+}
+
+.project-cat {
+
+	a.button.small,
+	a.button.small:visited {
+		padding: 7px 15px 9px;
+		margin: 0 10px 0 0;
+
+		@include font(bt,reg,weight);
+	}
+}
+
+// .bg-link-hover {
+// 	background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// 	background-image: linear-gradient( to right, #ff2500, #ff2500 50%, #212629 50% );
+// 	background-size: 200% 100%;
+// 	background-position: 100%;
+// 	border: 0;
+
+// 	&:hover {
+// 		transition: background 0.4s cubic-bezier( 0.215, 0, 0, 0.995 );
+// 		background-position: 0%;
+// 	}
+// }
+
+.projects-ctn {
+	padding-top: 120px;
+}
