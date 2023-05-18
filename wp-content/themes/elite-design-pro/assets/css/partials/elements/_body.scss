@@ -16,12 +16,26 @@ body {
 
 body {
 
-	@include font(bt, reg);
-	@include font-size(2);
+	@include font(mu, reg);
+	@include font-size(2.2);
 
 	background-color: map-get($map: $colors, $key: black);
 	color: map-get($map: $colors, $key: white);
 	line-height: 1.6;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/body-bg.webp);
+		background-repeat: repeat;
+		background-position: left top;
+		opacity: 0.06;
+		z-index: -2;
+	}
 }
 
 p {

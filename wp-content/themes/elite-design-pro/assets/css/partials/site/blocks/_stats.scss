@@ -1,9 +1,12 @@
 .fig-number {
 	font-size: 73px;
-	@include font(bt, bold);
+
+	@include font(mu, bold);
 	line-height: 1;
 }
+
 .single-stat {
+
 	h3 {
 		margin: 35px 0 0 0;
 	}

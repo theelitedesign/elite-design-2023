@@ -271,8 +271,8 @@ Mixin for transition
 .editor-styles-wrapper .heading-5,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .heading-6 {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   margin: 0 0 3rem;
   line-height: 1.15;
@@ -321,8 +321,8 @@ Mixin for transition
 }
 .editor-styles-wrapper .overline {
   font-size: 20px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -476,7 +476,7 @@ Mixin for transition
   height: 8px;
   position: absolute;
   background-color: #ff1d1d;
-  left: 0px;
+  left: 0;
   top: 9px;
   border-radius: 50%;
 }
@@ -513,13 +513,13 @@ Mixin for transition
 .editor-styles-wrapper .page-section ol li::before,
 .editor-styles-wrapper .hero-section ol li::before {
   color: #ff1d1d;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   content: counters(list, ".") ".";
   counter-increment: list;
   left: 0;
-  top: 0px;
+  top: 0;
   position: absolute;
   background-color: transparent;
 }
@@ -727,8 +727,8 @@ Mixin for transition
   text-align: left;
 }
 .editor-styles-wrapper .wp-caption p.wp-caption-text {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   margin: 0;
@@ -898,8 +898,8 @@ Mixin for transition
   padding: 6px 12px 7px;
   font-size: 15px;
   line-height: 20px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin: 0 5px 10px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -956,8 +956,8 @@ Mixin for transition
   border-bottom: none;
 }
 .editor-styles-wrapper .comment-author.vcard span {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .editor-styles-wrapper .comment-metadata {
@@ -1226,6 +1226,9 @@ Mixin for transition
   * Helper Classess
   *
   */
+  /*-------------------------------------------------
+  >> Basic styles for Blog
+  -------------------------------------------------*/
   /*-------------------------------------------------
   >> Styles for Website Blocks
   -------------------------------------------------*/
@@ -1588,8 +1591,8 @@ Mixin for transition
   position: relative;
   font-size: 22px;
   font-size: 22px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   color: #fff;
 }
@@ -1664,8 +1667,8 @@ Mixin for transition
   transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .header-nav ul ul li a::after,
@@ -1775,8 +1778,8 @@ Mixin for transition
 .acf-block-preview .nav-overlay .header-nav ul ul li a:visited {
     padding: initial;
     text-transform: inherit;
-    font-family: "Brandon Text", arial, sans-serif;
-    font-weight: 400;
+    font-family: "Mulish", arial, sans-serif;
+    font-weight: normal;
     font-style: normal;
   }
   .acf-block-preview .nav-overlay .header-nav ul ul li.current-menu-item > a, .acf-block-preview .nav-overlay .header-nav ul ul li.current-menu-parent > a {
@@ -1998,23 +2001,29 @@ Mixin for transition
 }
 .acf-block-preview .hero-ctn {
   padding: 19rem 0 10rem;
-  text-align: center;
 }
 .acf-block-preview .hero-ctn h1 {
   margin-bottom: 3.2rem;
 }
 .acf-block-preview .hero-ctn p {
-  font-size: 22px;
+  font-size: 36px;
 }
-.acf-block-preview .hero-content {
-  max-width: 780px;
-  margin: 0 auto;
+.acf-block-preview .hero__content a,
+.acf-block-preview .hero__content a:visited {
+  text-decoration: underline;
+}
+.acf-block-preview .hero__content a:hover,
+.acf-block-preview .hero__content a:visited:hover {
+  color: #ebfe00;
 }
 .acf-block-preview .hero-single {
   padding: 17rem 0 10rem;
 }
 .acf-block-preview [myattribute] {
   background-color: red;
+}
+.acf-block-preview .hero__buttons {
+  margin-top: 50px;
 }
 .acf-block-preview .footer-logo {
   line-height: 0.65;
@@ -2049,13 +2058,16 @@ Mixin for transition
 .acf-block-preview .footer-nav ul li a:visited {
   font-size: 24px;
   font-size: 24px;
+  color: #fff;
   line-height: 1.2;
   position: relative;
   display: inline-block;
+  border: 0;
+  font-weight: 600;
 }
 .acf-block-preview .footer-nav ul li.current-menu-item > a, .acf-block-preview .footer-nav ul li.current-menu-parent > a,
 .acf-block-preview .footer-nav ul li a:hover {
-  border: 0;
+  color: #ff1d1d;
 }
 .acf-block-preview .footer-nav ul ul {
   padding: 2rem 0 1rem;
@@ -2085,6 +2097,11 @@ Mixin for transition
   position: relative;
   display: inline-block;
   font-size: 24px;
+  color: #fff;
+}
+.acf-block-preview .legal-nav ul li a:hover,
+.acf-block-preview .legal-nav ul li a:visited:hover {
+  color: #ff1d1d;
 }
 .acf-block-preview .legal-nav ul li.current-menu-item a::after {
   -webkit-transform-origin: bottom left;
@@ -2096,9 +2113,6 @@ Mixin for transition
 }
 .acf-block-preview .legal-nav ul li:first-child {
   margin-right: 0;
-}
-.acf-block-preview footer .wrapper {
-  max-width: 1350px;
 }
 .acf-block-preview .cta-ctn {
   padding: 52px 55px;
@@ -2129,9 +2143,22 @@ Mixin for transition
 .acf-block-preview .site-socials ul li img {
   -webkit-filter: invert(99%) sepia(1%) saturate(2921%) hue-rotate(307deg) brightness(127%) contrast(100%);
           filter: invert(99%) sepia(1%) saturate(2921%) hue-rotate(307deg) brightness(127%) contrast(100%);
+  height: 30px;
+}
+.acf-block-preview .elitedesign-contact a,
+.acf-block-preview .elitedesign-contact a:visited {
+  color: #fff;
+}
+.acf-block-preview .elitedesign-contact a:hover,
+.acf-block-preview .elitedesign-contact a:visited:hover {
+  color: #ff1d1d;
 }
 .acf-block-preview .elitedesign-contact .big-body {
   margin-bottom: 10px;
+}
+.acf-block-preview .elitedesign-contact .big-body b {
+  display: inline-block;
+  width: 100px;
 }
 .acf-block-preview .footer-ctn {
   margin-bottom: 190px;
@@ -2139,18 +2166,40 @@ Mixin for transition
 .acf-block-preview .footer-bottom {
   padding-bottom: 50px;
 }
-.acf-block-preview .copyright-area p:last-child {
+.acf-block-preview .copyright-area p {
   margin-bottom: 0;
 }
+.acf-block-preview .copyright-area p a,
+.acf-block-preview .copyright-area p a:visited {
+  color: #fff;
+}
+.acf-block-preview .copyright-area p a:hover,
+.acf-block-preview .copyright-area p a:visited:hover {
+  color: #ff1d1d;
+}
+.acf-block-preview .copyright-area s p:last-child {
+  margin-bottom: 0;
+}
+.acf-block-preview .inner-wrapper,
 .acf-block-preview .wrapper {
-  max-width: 1310px;
+  max-width: 1500px;
   width: 88%;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.acf-block-preview .container-1000 .wrapper {
+.acf-block-preview .at-right-section .inner-wrapper,
+.acf-block-preview .at-right-section .wrapper {
+  padding-left: 200px;
+}
+.acf-block-preview .at-left-section .inner-wrapper,
+.acf-block-preview .at-left-section .wrapper {
+  padding-right: 200px;
+}
+.acf-block-preview .ctn-1000 .wrapper {
   max-width: 1000px;
 }
-.acf-block-preview .container-760 .wrapper {
+.acf-block-preview .ctn-760 .wrapper {
   max-width: 760px;
 }
 .acf-block-preview .ctn {
@@ -2161,12 +2210,12 @@ Mixin for transition
 .acf-block-preview .overflow-hidden {
   overflow-x: hidden;
 }
-.acf-block-preview .red-ctn {
-  background-color: #ff1d1d;
-}
-.acf-block-preview .full-width-ctn .wrapper {
+.acf-block-preview s .full-width-ctn .wrapper {
   max-width: 100%;
   width: 100%;
+}
+.acf-block-preview .blue-ctn {
+  background-color: #323ff0;
 }
 .acf-block-preview .s-270 {
   height: 270px;
@@ -2201,26 +2250,8 @@ Mixin for transition
 .acf-block-preview .s-30 {
   height: 30px;
 }
-.acf-block-preview .ts-160 {
-  height: 160px;
-}
-.acf-block-preview .ts-140 {
-  height: 140px;
-}
-.acf-block-preview .ts-120 {
-  height: 120px;
-}
-.acf-block-preview .ts-100 {
-  height: 100px;
-}
-.acf-block-preview .ts-80 {
-  height: 80px;
-}
-.acf-block-preview .ts-60 {
-  height: 60px;
-}
-.acf-block-preview .ts-40 {
-  height: 40px;
+.acf-block-preview .s-20 {
+  height: 20px;
 }
 .acf-block-preview .ts-160 {
   height: 160px;
@@ -2336,7 +2367,7 @@ Mixin for transition
   padding: 16px 34px 18px;
   text-decoration: none;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
@@ -2345,8 +2376,8 @@ Mixin for transition
   font-size: 20px;
   margin-right: 15px;
   border-radius: 100px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 .acf-block-preview a.button:last-child,
@@ -2356,6 +2387,7 @@ Mixin for transition
 .acf-block-preview a.button:hover,
 .acf-block-preview a.button:visited:hover {
   background-color: #fff;
+  border-color: #fff;
   color: #0e0e0e;
 }
 .acf-block-preview a.button.big,
@@ -2395,8 +2427,8 @@ Mixin for transition
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   margin-right: 9px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   font-size: 16px;
@@ -2507,6 +2539,19 @@ Mixin for transition
       -ms-flex-align: center;
           align-items: center;
 }
+.acf-block-preview .flex-between-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
 .acf-block-preview .flex-ctn,
 .acf-block-preview .flexarea {
   display: -webkit-box;
@@ -2543,7 +2588,24 @@ Mixin for transition
   background-position: center;
 }
 .acf-block-preview .col-49 {
-  width: 49.2%;
+  width: 49.4%;
+}
+.acf-block-preview .article-tags .tag {
+  margin-right: 6px;
+}
+.acf-block-preview .tag {
+  padding: 5px 10px;
+  font-size: 14px;
+  text-transform: capitalize;
+  background-color: #323ff0;
+  display: inline-block;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.acf-block-preview .tag.aqua {
+  background-color: #00f0ff;
+  color: #0e0e0e;
 }
 .acf-block-preview .reset-bg, .acf-block-preview .gallrey-image {
   background-repeat: no-repeat;
@@ -2562,11 +2624,11 @@ Mixin for transition
 .acf-block-preview .mb-50 {
   margin-bottom: 50px;
 }
-.acf-block-preview .ma-900 {
-  max-width: 900px;
+.acf-block-preview .mb-0 {
+  margin-bottom: 0;
 }
-.acf-block-preview .ma-800 {
-  max-width: 800px;
+.acf-block-preview .ma-1200 {
+  max-width: 1200px;
 }
 .acf-block-preview .bg-cover {
   background-repeat: no-repeat;
@@ -2592,12 +2654,37 @@ Mixin for transition
 .acf-block-preview .p-relative {
   position: relative;
 }
+.acf-block-preview .floating-ctn a,
+.acf-block-preview .floating-ctn a:visited {
+  border: 0;
+}
+.acf-block-preview .floating-ctn a:hover,
+.acf-block-preview .floating-ctn a:visited:hover {
+  color: #ebfe00;
+}
+.acf-block-preview .story-article {
+  padding: 30px 0 70px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.acf-block-preview .story-article:nth-child(1) {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.acf-block-preview .story-article a:hover,
+.acf-block-preview .story-article a:visited:hover {
+  color: #ebfe00;
+}
 .acf-block-preview .leadparagraph_ctn {
-  max-width: 862px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .acf-block-preview .leadparagraph_ctn p:last-child {
   margin-bottom: 0;
+}
+.acf-block-preview .lead-text span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.acf-block-preview .lead-text span.active {
+  color: #fff;
 }
 .acf-block-preview .faq-block {
   max-width: 825px;
@@ -2609,8 +2696,8 @@ Mixin for transition
   font-size: 24px;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   cursor: pointer;
   position: relative;
@@ -2675,8 +2762,8 @@ Mixin for transition
   font-size: 16px;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   padding: 10px;
   color: #0e0e0e;
@@ -2701,8 +2788,8 @@ Mixin for transition
   font-size: 15px;
   font-size: 15px;
   line-height: 20px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .glossary-content {
@@ -2730,8 +2817,8 @@ Mixin for transition
   border-top: 0;
   font-size: 20px;
   line-height: 32px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .faq-slide .faq > a::after {
@@ -2762,9 +2849,9 @@ Mixin for transition
   overflow: hidden;
 }
 .acf-block-preview .iat-img-area img {
-  -webkit-transition: all 5s ease-in-out 1.5s;
-  -o-transition: all 5s ease-in-out 1.5s;
-  transition: all 5s ease-in-out 1.5s;
+  -webkit-transition: all 5s ease-in-out 0.5s;
+  -o-transition: all 5s ease-in-out 0.5s;
+  transition: all 5s ease-in-out 0.5s;
 }
 .acf-block-preview .video-ctn {
   height: 800px;
@@ -2820,8 +2907,8 @@ Mixin for transition
           box-sizing: border-box;
   color: #0e0e0e;
   background-color: #fff;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   border-radius: 20px;
   font-size: 34px;
@@ -2866,27 +2953,22 @@ Mixin for transition
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 0 10px 0 0;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   background-image: url(../img/white-long-arrow.svg);
   background-size: 25px;
+  opacity: 1 !important;
 }
 .acf-block-preview .owl-carousel.testi-ctn .owl-nav button[type=button]:hover {
-  background-color: #ff1d1d;
+  background-color: #fff;
 }
 .acf-block-preview .owl-carousel.testi-ctn .owl-nav button.owl-next {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-}
-.acf-block-preview .owl-carousel.testi-ctn .owl-nav button.disabled {
-  opacity: 0.7;
-}
-.acf-block-preview .owl-carousel.testi-ctn .owl-nav button.disabled:hover {
-  background-color: #fff;
 }
 .acf-block-preview .large-heading-ctn {
   padding: 90px 0 422px;
@@ -2989,7 +3071,6 @@ Mixin for transition
   height: 8px;
   margin: 0;
   width: 60px;
-  background-color: #ecf6fc;
 }
 .acf-block-preview .images-slider-ctn .owl-dots input[type=submit]:hover, .acf-block-preview .images-slider-ctn .owl-dots input[type=submit].active,
 .acf-block-preview .images-slider-ctn .owl-dots button:hover,
@@ -3262,8 +3343,8 @@ Mixin for transition
 }
 .acf-block-preview .fig-number {
   font-size: 73px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   line-height: 1;
 }
@@ -3287,7 +3368,7 @@ Mixin for transition
           box-shadow: 0px 0px 35px rgba(1, 18, 64, 0.25);
 }
 .acf-block-preview .projects-area {
-  width: 292%;
+  width: 160%;
   display: flow-root;
 }
 .acf-block-preview a.project-image,
@@ -3338,7 +3419,7 @@ Mixin for transition
 .acf-block-preview .project-cat a.button.small:visited {
   padding: 7px 15px 9px;
   margin: 0 10px 0 0;
-  font-weight: 400;
+  font-weight: normal;
 }
 .acf-block-preview .projects-ctn {
   padding-top: 120px;
@@ -3371,7 +3452,7 @@ Mixin for transition
   color: #ff1d1d;
 }
 .acf-block-preview .services-area.three-cols .col:nth-child(n+4) {
-  margin-top: 60px;
+  margin-top: 100px;
 }
 .acf-block-preview .head-btn {
   line-height: 0.65;
@@ -3429,8 +3510,8 @@ Mixin for transition
 .acf-block-preview select,
 .acf-block-preview textarea,
 .acf-block-preview .gform-text-input-reset {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   height: 50px;
@@ -3569,8 +3650,8 @@ Mixin for transition
   transition: all 0.4s ease-in-out;
   outline: none;
   border: none;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   height: 50px;

@@ -8,7 +8,7 @@
 .iat-ctn:hover {
 
 	.iat-img-area img {
-		transform: scale( 1.115 );
+		transform: scale(1.115);
 	}
 }
 
@@ -17,6 +17,6 @@
 	overflow: hidden;
 
 	img {
-		transition: all 5s ease-in-out 1.5s;
+		transition: all 5s ease-in-out 0.5s;
 	}
 }

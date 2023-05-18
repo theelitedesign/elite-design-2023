@@ -1,5 +1,5 @@
 .projects-area {
-	width: 292%;
+	width: 160%;
 	display: flow-root;
 }
 
@@ -64,7 +64,7 @@ a.project-image:visited {
 		padding: 7px 15px 9px;
 		margin: 0 10px 0 0;
 
-		@include font(bt,reg,weight);
+		@include font(mu, reg, weight);
 	}
 }
 

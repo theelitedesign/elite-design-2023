@@ -342,8 +342,8 @@ h5,
 .heading-5,
 h6,
 .heading-6 {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   margin: 0 0 3rem;
   line-height: 1.15;
@@ -408,8 +408,8 @@ h6,
 
 .overline {
   font-size: 20px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -559,14 +559,27 @@ body {
 >> Edit these styles as required
 ------------------------------------------------- */
 body {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
-  font-size: 20px;
-  font-size: 20px;
+  font-size: 22px;
+  font-size: 22px;
   background-color: #0e0e0e;
   color: #fff;
   line-height: 1.6;
+}
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/body-bg.webp);
+  background-repeat: repeat;
+  background-position: left top;
+  opacity: 0.06;
+  z-index: -2;
 }
 
 p {
@@ -612,7 +625,9 @@ a {
 ------------------------------------------------- */
 .page-section a, .page-section:visited,
 .hero-section a,
-.hero-section:visited {
+.hero-section:visited,
+.footer-section a,
+.footer-section:visited {
   color: #fff;
   border-bottom: 1px solid transparent;
 }
@@ -620,7 +635,11 @@ a {
 .hero-section a:hover,
 .hero-section a:active,
 .hero-section:visited:hover,
-.hero-section:visited:active {
+.hero-section:visited:active,
+.footer-section a:hover,
+.footer-section a:active,
+.footer-section:visited:hover,
+.footer-section:visited:active {
   color: #ff1d1d;
 }
 
@@ -757,7 +776,7 @@ ol ul {
   height: 8px;
   position: absolute;
   background-color: #ff1d1d;
-  left: 0px;
+  left: 0;
   top: 9px;
   border-radius: 50%;
 }
@@ -794,13 +813,13 @@ ol ul {
 .page-section ol li::before,
 .hero-section ol li::before {
   color: #ff1d1d;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   content: counters(list, ".") ".";
   counter-increment: list;
   left: 0;
-  top: 0px;
+  top: 0;
   position: absolute;
   background-color: transparent;
 }
@@ -1082,8 +1101,8 @@ input[type=string],
 select,
 textarea,
 .gform-text-input-reset {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   height: 50px;
@@ -1249,8 +1268,8 @@ input[type=reset] {
   transition: all 0.4s ease-in-out;
   outline: none;
   border: none;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   height: 50px;
@@ -1974,8 +1993,8 @@ img.gform_ajax_spinner {
   text-align: left;
 }
 .wp-caption p.wp-caption-text {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   margin: 0;
@@ -2205,8 +2224,8 @@ a img.aligncenter {
   padding: 6px 12px 7px;
   font-size: 15px;
   line-height: 20px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin: 0 5px 10px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -2275,8 +2294,8 @@ a img.aligncenter {
   border-bottom: none;
 }
 .comment-author.vcard span {
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -2734,8 +2753,8 @@ body.logged-in.admin-bar header {
   position: relative;
   font-size: 22px;
   font-size: 22px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   color: #fff;
 }
@@ -2810,8 +2829,8 @@ body.logged-in.admin-bar header {
   transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .header-nav ul ul li a::after,
@@ -2925,8 +2944,8 @@ body.logged-in.admin-bar header {
 .nav-overlay .header-nav ul ul li a:visited {
     padding: initial;
     text-transform: inherit;
-    font-family: "Brandon Text", arial, sans-serif;
-    font-weight: 400;
+    font-family: "Mulish", arial, sans-serif;
+    font-weight: normal;
     font-style: normal;
   }
   .nav-overlay .header-nav ul ul li.current-menu-item > a, .nav-overlay .header-nav ul ul li.current-menu-parent > a {
@@ -3155,18 +3174,21 @@ body.logged-in.admin-bar header {
 -------------------------------------------------*/
 .hero-ctn {
   padding: 19rem 0 10rem;
-  text-align: center;
 }
 .hero-ctn h1 {
   margin-bottom: 3.2rem;
 }
 .hero-ctn p {
-  font-size: 22px;
+  font-size: 36px;
 }
 
-.hero-content {
-  max-width: 780px;
-  margin: 0 auto;
+.hero__content a,
+.hero__content a:visited {
+  text-decoration: underline;
+}
+.hero__content a:hover,
+.hero__content a:visited:hover {
+  color: #ebfe00;
 }
 
 .hero-single {
@@ -3175,6 +3197,10 @@ body.logged-in.admin-bar header {
 
 [myattribute] {
   background-color: red;
+}
+
+.hero__buttons {
+  margin-top: 50px;
 }
 
 /*-------------------------------------------------
@@ -3216,13 +3242,16 @@ body.logged-in.admin-bar header {
 .footer-nav ul li a:visited {
   font-size: 24px;
   font-size: 24px;
+  color: #fff;
   line-height: 1.2;
   position: relative;
   display: inline-block;
+  border: 0;
+  font-weight: 600;
 }
 .footer-nav ul li.current-menu-item > a, .footer-nav ul li.current-menu-parent > a,
 .footer-nav ul li a:hover {
-  border: 0;
+  color: #ff1d1d;
 }
 .footer-nav ul ul {
   padding: 2rem 0 1rem;
@@ -3253,6 +3282,11 @@ body.logged-in.admin-bar header {
   position: relative;
   display: inline-block;
   font-size: 24px;
+  color: #fff;
+}
+.legal-nav ul li a:hover,
+.legal-nav ul li a:visited:hover {
+  color: #ff1d1d;
 }
 .legal-nav ul li.current-menu-item a::after {
   -webkit-transform-origin: bottom left;
@@ -3264,10 +3298,6 @@ body.logged-in.admin-bar header {
 }
 .legal-nav ul li:first-child {
   margin-right: 0;
-}
-
-footer .wrapper {
-  max-width: 1350px;
 }
 
 .cta-ctn {
@@ -3302,10 +3332,23 @@ footer .wrapper {
 .site-socials ul li img {
   -webkit-filter: invert(99%) sepia(1%) saturate(2921%) hue-rotate(307deg) brightness(127%) contrast(100%);
           filter: invert(99%) sepia(1%) saturate(2921%) hue-rotate(307deg) brightness(127%) contrast(100%);
+  height: 30px;
 }
 
+.elitedesign-contact a,
+.elitedesign-contact a:visited {
+  color: #fff;
+}
+.elitedesign-contact a:hover,
+.elitedesign-contact a:visited:hover {
+  color: #ff1d1d;
+}
 .elitedesign-contact .big-body {
   margin-bottom: 10px;
+}
+.elitedesign-contact .big-body b {
+  display: inline-block;
+  width: 100px;
 }
 
 .footer-ctn {
@@ -3316,7 +3359,18 @@ footer .wrapper {
   padding-bottom: 50px;
 }
 
-.copyright-area p:last-child {
+.copyright-area p {
+  margin-bottom: 0;
+}
+.copyright-area p a,
+.copyright-area p a:visited {
+  color: #fff;
+}
+.copyright-area p a:hover,
+.copyright-area p a:visited:hover {
+  color: #ff1d1d;
+}
+.copyright-area s p:last-child {
   margin-bottom: 0;
 }
 
@@ -3328,17 +3382,30 @@ footer .wrapper {
  * containers
  *
 ****/
+.inner-wrapper,
 .wrapper {
-  max-width: 1310px;
+  max-width: 1500px;
   width: 88%;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.container-1000 .wrapper {
+.at-right-section .inner-wrapper,
+.at-right-section .wrapper {
+  padding-left: 200px;
+}
+
+.at-left-section .inner-wrapper,
+.at-left-section .wrapper {
+  padding-right: 200px;
+}
+
+.ctn-1000 .wrapper {
   max-width: 1000px;
 }
 
-.container-760 .wrapper {
+.ctn-760 .wrapper {
   max-width: 760px;
 }
 
@@ -3352,13 +3419,13 @@ footer .wrapper {
   overflow-x: hidden;
 }
 
-.red-ctn {
-  background-color: #ff1d1d;
-}
-
-.full-width-ctn .wrapper {
+s .full-width-ctn .wrapper {
   max-width: 100%;
   width: 100%;
+}
+
+.blue-ctn {
+  background-color: #323ff0;
 }
 
 /*-------------------------------------------------
@@ -3408,32 +3475,8 @@ footer .wrapper {
   height: 30px;
 }
 
-.ts-160 {
-  height: 160px;
-}
-
-.ts-140 {
-  height: 140px;
-}
-
-.ts-120 {
-  height: 120px;
-}
-
-.ts-100 {
-  height: 100px;
-}
-
-.ts-80 {
-  height: 80px;
-}
-
-.ts-60 {
-  height: 60px;
-}
-
-.ts-40 {
-  height: 40px;
+.s-20 {
+  height: 20px;
 }
 
 /*-------------------------------------------------
@@ -3600,7 +3643,7 @@ a.button:visited {
   padding: 16px 34px 18px;
   text-decoration: none;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
@@ -3609,8 +3652,8 @@ a.button:visited {
   font-size: 20px;
   margin-right: 15px;
   border-radius: 100px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
 }
 a.button:last-child,
@@ -3620,6 +3663,7 @@ a.button:visited:last-child {
 a.button:hover,
 a.button:visited:hover {
   background-color: #fff;
+  border-color: #fff;
   color: #0e0e0e;
 }
 a.button.big,
@@ -3660,8 +3704,8 @@ a.wp-block-button__link {
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   margin-right: 9px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   font-size: 16px;
@@ -3789,6 +3833,20 @@ a.wp-block-button__link.has-text-color.has-background:hover {
           align-items: center;
 }
 
+.flex-between-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .flex-ctn,
 .flexarea {
   display: -webkit-box;
@@ -3831,7 +3889,26 @@ a.wp-block-button__link.has-text-color.has-background:hover {
 }
 
 .col-49 {
-  width: 49.2%;
+  width: 49.4%;
+}
+
+.article-tags .tag {
+  margin-right: 6px;
+}
+
+.tag {
+  padding: 5px 10px;
+  font-size: 14px;
+  text-transform: capitalize;
+  background-color: #323ff0;
+  display: inline-block;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.tag.aqua {
+  background-color: #00f0ff;
+  color: #0e0e0e;
 }
 
 /**
@@ -3865,12 +3942,12 @@ a.wp-block-button__link.has-text-color.has-background:hover {
   margin-bottom: 50px;
 }
 
-.ma-900 {
-  max-width: 900px;
+.mb-0 {
+  margin-bottom: 0;
 }
 
-.ma-800 {
-  max-width: 800px;
+.ma-1200 {
+  max-width: 1200px;
 }
 
 .bg-cover {
@@ -3903,6 +3980,30 @@ main#main-section {
   position: relative;
 }
 
+.floating-ctn a,
+.floating-ctn a:visited {
+  border: 0;
+}
+.floating-ctn a:hover,
+.floating-ctn a:visited:hover {
+  color: #ebfe00;
+}
+
+/*-------------------------------------------------
+>> Basic styles for Blog
+-------------------------------------------------*/
+.story-article {
+  padding: 30px 0 70px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.story-article:nth-child(1) {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.story-article a:hover,
+.story-article a:visited:hover {
+  color: #ebfe00;
+}
+
 /*-------------------------------------------------
 >> Styles for Website Blocks
 -------------------------------------------------*/
@@ -3910,11 +4011,18 @@ main#main-section {
 >> Basic styles for Defualt Block
 ------------------------------------------------- */
 .leadparagraph_ctn {
-  max-width: 862px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .leadparagraph_ctn p:last-child {
   margin-bottom: 0;
+}
+
+.lead-text span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.lead-text span.active {
+  color: #fff;
 }
 
 /* -------------------------------------------------
@@ -3931,8 +4039,8 @@ main#main-section {
   font-size: 24px;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   cursor: pointer;
   position: relative;
@@ -3999,8 +4107,8 @@ main#main-section {
   font-size: 16px;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   padding: 10px;
   color: #0e0e0e;
@@ -4026,8 +4134,8 @@ main#main-section {
   font-size: 15px;
   font-size: 15px;
   line-height: 20px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -4057,8 +4165,8 @@ main#main-section {
   border-top: 0;
   font-size: 20px;
   line-height: 32px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .faq-slide .faq > a::after {
@@ -4095,9 +4203,9 @@ main#main-section {
   overflow: hidden;
 }
 .iat-img-area img {
-  -webkit-transition: all 5s ease-in-out 1.5s;
-  -o-transition: all 5s ease-in-out 1.5s;
-  transition: all 5s ease-in-out 1.5s;
+  -webkit-transition: all 5s ease-in-out 0.5s;
+  -o-transition: all 5s ease-in-out 0.5s;
+  transition: all 5s ease-in-out 0.5s;
 }
 
 /* -------------------------------------------------
@@ -4168,8 +4276,8 @@ a.video-btn:hover {
           box-sizing: border-box;
   color: #0e0e0e;
   background-color: #fff;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   border-radius: 20px;
   font-size: 34px;
@@ -4222,27 +4330,22 @@ a.video-btn:hover {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 0 10px 0 0;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   background-image: url(../img/white-long-arrow.svg);
   background-size: 25px;
+  opacity: 1 !important;
 }
 .owl-carousel.testi-ctn .owl-nav button[type=button]:hover {
-  background-color: #ff1d1d;
+  background-color: #fff;
 }
 .owl-carousel.testi-ctn .owl-nav button.owl-next {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-}
-.owl-carousel.testi-ctn .owl-nav button.disabled {
-  opacity: 0.7;
-}
-.owl-carousel.testi-ctn .owl-nav button.disabled:hover {
-  background-color: #fff;
 }
 
 /* -------------------------------------------------
@@ -4361,7 +4464,6 @@ a.video-btn:hover {
   height: 8px;
   margin: 0;
   width: 60px;
-  background-color: #ecf6fc;
 }
 .images-slider-ctn .owl-dots input[type=submit]:hover, .images-slider-ctn .owl-dots input[type=submit].active,
 .images-slider-ctn .owl-dots button:hover,
@@ -4690,8 +4792,8 @@ a.video-btn:hover {
 ------------------------------------------------- */
 .fig-number {
   font-size: 73px;
-  font-family: "Brandon Text", arial, sans-serif;
-  font-weight: 700;
+  font-family: "Mulish", arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   line-height: 1;
 }
@@ -4729,7 +4831,7 @@ a.video-btn:hover {
 >> Basic styles for Projects
 ------------------------------------------------- */
 .projects-area {
-  width: 292%;
+  width: 160%;
   display: flow-root;
 }
 
@@ -4784,7 +4886,7 @@ a.project-image:visited:hover::before {
 .project-cat a.button.small:visited {
   padding: 7px 15px 9px;
   margin: 0 10px 0 0;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .projects-ctn {
@@ -4824,7 +4926,7 @@ a.project-image:visited:hover::before {
 }
 
 .services-area.three-cols .col:nth-child(n+4) {
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 .head-btn {
@@ -5709,16 +5811,22 @@ figure th {
 > Import Fonts
 ------------------------------------------------------------------ */
 @font-face {
-  font-family: "Brandon Text";
+  font-family: "Mulish";
   font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/BrandonText-Bold.woff2") format("woff2");
+  font-weight: bold;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Brandon Text";
+  font-family: "Mulish";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/BrandonText-Regular.woff2") format("woff2");
+  font-weight: normal;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2");
 }
 /* ------------------------------------------------------------------
 > Vendor CSS Starts Here

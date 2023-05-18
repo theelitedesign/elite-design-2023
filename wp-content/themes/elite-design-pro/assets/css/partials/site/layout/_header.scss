@@ -64,6 +64,7 @@ header {
 	&.shrink {
 		padding: 12px 2.5%;
 		box-shadow: 0 -4px 16px rgb(18 27 32 / 0.15);
+
 		&::after {
 			opacity: 1;
 		}

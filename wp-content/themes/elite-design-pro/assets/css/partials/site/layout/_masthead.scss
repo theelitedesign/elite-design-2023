@@ -1,19 +1,25 @@
 .hero-ctn {
 	padding: 19rem 0 10rem;
-	text-align: center;
 
 	h1 {
 		margin-bottom: 3.2rem;
 	}
 
 	p {
-		font-size: 22px;
+		font-size: 36px;
 	}
 }
 
-.hero-content {
-	max-width: 780px;
-	margin: 0 auto;
+.hero__content {
+
+	a,
+	a:visited {
+		text-decoration: underline;
+
+		&:hover {
+			color: map-get($map: $colors, $key: yellow);
+		}
+	}
 }
 
 .hero-single {
@@ -22,4 +28,9 @@
 
 [myattribute] {
 	background-color: red;
+}
+
+
+.hero__buttons {
+	margin-top: 50px;
 }

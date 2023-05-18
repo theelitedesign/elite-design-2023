@@ -82,8 +82,8 @@ ol ul {
 				width: 8px;
 				height: 8px;
 				position: absolute;
-				background-color: map-get( $map: $colors, $key: red );
-				left: 0px;
+				background-color: map-get($map: $colors, $key: red);
+				left: 0;
 				top: 9px;
 
 				@include border-radius(50%);
@@ -97,7 +97,7 @@ ol ul {
 
 				&::before {
 					counter-increment: list1;
-					content: counters( list1, "." ) ".";
+					content: counters(list1, ".") ".";
 				}
 			}
 		}
@@ -122,14 +122,14 @@ ol ul {
 			}
 
 			&::before {
-				color: map-get( $map: $colors, $key: red );
+				color: map-get($map: $colors, $key: red);
 
-				@include font(bt, reg);
+				@include font(mu, reg);
 
-				content: counters( list, "." ) ".";
+				content: counters(list, ".") ".";
 				counter-increment: list;
 				left: 0;
-				top: 0px;
+				top: 0;
 				position: absolute;
 				background-color: transparent;
 			}
@@ -168,7 +168,7 @@ ol ul {
 					height: 6px;
 					background-position: left top;
 					position: absolute;
-					background-color: map-get( $map: $base_colors, $key: list-before-bgcolor );
+					background-color: map-get($map: $base_colors, $key: list-before-bgcolor);
 					left: 0;
 					top: 9px;
 				}

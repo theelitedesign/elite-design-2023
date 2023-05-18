@@ -55,7 +55,7 @@ $elitedesign_blk_prjt_slct_projects = $block_fields['elitedesign_blk_prjt_slct_p
 	<section class="overflow-hidden cat-bg ctn">
 		<div class="wrapper">
 			<div class="projects-ctn horizontal-scroll-container">
-				<div class="section-head mb-50 ma-900">
+				<div class="section-head mb-50 ma-1200">
 					<?php if($elitedesign_blk_prjt_tkicker_text){ ?>
 						<div class="overline"><?php echo $elitedesign_blk_prjt_tkicker_text; ?></div>
 					<?php } ?>

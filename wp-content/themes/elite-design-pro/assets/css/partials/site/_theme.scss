@@ -137,7 +137,7 @@ a.button:visited {
 	padding: 16px 34px 18px;
 	text-decoration: none;
 	color: map-get($map: $colors, $key: white);
-	border: 2px solid map-get($map: $colors, $key: white);
+	border: 2px solid map-get($map: $colors, $key: white30);
 	transition: all 0.35s ease-in-out;
 	line-height: 1;
 
@@ -146,7 +146,7 @@ a.button:visited {
 	margin-right: 15px;
 
 	@include border-radius(100px);
-	@include font(bt, bold);
+	@include font(mu, bold);
 
 	&:last-child {
 		margin-right: 0;
@@ -154,6 +154,7 @@ a.button:visited {
 
 	&:hover {
 		background-color: map-get($map: $colors, $key: white);
+		border-color: map-get($map: $colors, $key: white);
 		color: map-get($map: $colors, $key: black);
 	}
 
@@ -193,7 +194,7 @@ a.wp-block-button__link {
 	transition: all 0.35s ease-in-out;
 	margin-right: 9px;
 
-	@include font(bt, reg);
+	@include font(mu, reg);
 	@include font-size(1.6);
 	@include border-radius(100px);
 
@@ -332,6 +333,13 @@ a.wp-block-button__link:visited,
 	align-items: center;
 }
 
+.flex-between-start {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
 .flex-ctn,
 .flexarea {
 	display: flex;
@@ -365,7 +373,31 @@ a.wp-block-button__link:visited,
 }
 
 .col-49 {
-	width: 49.2%;
+	width: 49.4%;
+}
+
+.article-tags {
+
+	.tag {
+		margin-right: 6px;
+	}
+}
+
+.tag {
+	padding: 5px 10px;
+	font-size: 14px;
+	text-transform: capitalize;
+	background-color: map-get($map: $colors, $key: eblue);
+	display: inline-block;
+	border-radius: 100px;
+	margin-bottom: 20px;
+
+	@include font(mu, sbold, weight);
+
+	&.aqua {
+		background-color: map-get($map: $colors, $key: aqua);
+		color: map-get($map: $colors, $key: black);
+	}
 }
 
 /**
@@ -403,13 +435,14 @@ a.wp-block-button__link:visited,
 	margin-bottom: 50px;
 }
 
-.ma-900 {
-	max-width: 900px;
+.mb-0 {
+	margin-bottom: 0;
 }
 
-.ma-800 {
-	max-width: 800px;
+.ma-1200 {
+	max-width: 1200px;
 }
+
 
 .bg-cover {
 	background-repeat: no-repeat;
@@ -441,4 +474,17 @@ main#main-section {
 
 .p-relative {
 	position: relative;
+}
+
+
+.floating-ctn {
+
+	a,
+	a:visited {
+		border: 0;
+
+		&:hover {
+			color: map-get($map: $colors, $key: yellow);
+		}
+	}
 }

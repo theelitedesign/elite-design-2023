@@ -119,7 +119,7 @@ $elitedesign_ftr_copyright_text = ( isset( $option_fields['elitedesign_ftr_copyr
 									'fallback_cb'    => 'nav_fallback',
 								)
 							);
-							?> 
+							?>
 						</div>
 						<div class="footer-widget footer-nav animated-hover">
 							<?php
@@ -158,7 +158,7 @@ $elitedesign_ftr_copyright_text = ( isset( $option_fields['elitedesign_ftr_copyr
 			<div class="footer-bottom flex">
 					<div class="copyright-area big-body animated-hover">
 						<?php if($elitedesign_ftr_copyright_text){ ?>
-							<p><?php echo $elitedesign_ftr_copyright_text; ?> Site by <a href="#">ELITE</a></p>
+							<p><?php echo $elitedesign_ftr_copyright_text; ?> Site by <a href="#">ELITE Design</a></p>
 						<?php } ?>
 				</div>
 				<div class="legal-nav animated-hover">
@@ -172,7 +172,7 @@ $elitedesign_ftr_copyright_text = ( isset( $option_fields['elitedesign_ftr_copyr
 						?>
 				</div>
 			</div>
-			
+
 		</div>
 	<!-- Footer End --> <?php if($elitedesign_schema_check){ ?> <script type="application/ld+json">
 	{

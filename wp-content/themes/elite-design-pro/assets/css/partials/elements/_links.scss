@@ -11,7 +11,7 @@ a {
 
 	outline: none;
 	position: relative;
-	color: map-get( $map: $colors, $key: black );
+	color: map-get($map: $colors, $key: black);
 }
 
 /* -------------------------------------------------
@@ -21,16 +21,17 @@ a {
 ------------------------------------------------- */
 
 .page-section,
-.hero-section {
+.hero-section,
+.footer-section {
 
 	a,
 	&:visited {
-		color: map-get( $map: $colors, $key: white );
+		color: map-get($map: $colors, $key: white);
 		border-bottom: 1px solid transparent;
 
 		&:hover,
 		&:active {
-			color: map-get( $map: $colors, $key: red );
+			color: map-get($map: $colors, $key: red);
 		}
 	}
 }

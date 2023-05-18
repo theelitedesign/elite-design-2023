@@ -100,7 +100,7 @@ $elitedesign_blk_slct_serv = $block_fields['elitedesign_blk_slct_serv'];
 							</div>
 							<div class="service-desc">
 								<h3 class="heading-4"><a href="<?php the_permalink(); ?>" class="bg-link-hover"><?php the_title(); ?></a></h3>
-								<div class="med-body">
+								<div class="text">
 									<p><?php echo the_excerpt(); ?></p>
 								</div>
 								<a href="<?php the_permalink(); ?>" class="button arrow-btn small fill-trp">Learn More</a>

@@ -64,7 +64,7 @@ $elitedesign_blk_tocoltxt_cols = $block_fields['elitedesign_blk_tocoltxt_cols'];
 					<div class="overline"><?php echo $elitedesign_blk_tocoltxt_kicker; ?></div>
 
 				<?php } // Kicker Text End
-				
+
 				if($elitedesign_blk_tocoltxt_title) { ?>
 
 					<h2><?php echo $elitedesign_blk_tocoltxt_title; ?></h2>
@@ -82,7 +82,7 @@ $elitedesign_blk_tocoltxt_cols = $block_fields['elitedesign_blk_tocoltxt_cols'];
 
 						$title = $to_col['title'];
 						$text = $to_col['text'];
-						
+
 					?>
 
 						<div class="single-text-col col-49">
@@ -91,12 +91,12 @@ $elitedesign_blk_tocoltxt_cols = $block_fields['elitedesign_blk_tocoltxt_cols'];
 
 								<h4><?php echo $title; ?></h4>
 
-							<?php } 
-							
-							
+							<?php }
+
+
 							if($text) { ?>
 
-							<div class="med-body">
+							<div class="text">
 
 								<?php echo  html_entity_decode($text); ?>
 
@@ -107,7 +107,7 @@ $elitedesign_blk_tocoltxt_cols = $block_fields['elitedesign_blk_tocoltxt_cols'];
 						</div>
 
 					<?php } ?>
-					
+
 				</div>
 
 			<?php } ?>

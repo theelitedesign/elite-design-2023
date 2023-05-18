@@ -1,18 +1,18 @@
 $base-url: "../";
 $used-fonts: ();
 $base-font-stack: (
-	bt: (
+	mu: (
 		light: (
 			family: (
-				"Brandon Text",
+				"Mulish",
 				arial,
 				sans-serif,
 			),
 			weight: 300,
 			style: normal,
 			font-face: (
-				family: "Brandon Text",
-				path: "BrandonText-Light",
+				family: "Mulish",
+				path: "Mulish-Light",
 				formats: (
 					woff2,
 				),
@@ -20,15 +20,31 @@ $base-font-stack: (
 		),
 		reg: (
 			family: (
-				"Brandon Text",
+				"Mulish",
 				arial,
 				sans-serif,
 			),
-			weight: 400,
+			weight: normal,
 			style: normal,
 			font-face: (
-				family: "Brandon Text",
-				path: "BrandonText-Regular",
+				family: "Mulish",
+				path: "Mulish-Regular",
+				formats: (
+					woff2,
+				),
+			),
+		),
+		sbold: (
+			family: (
+				"Mulish",
+				arial,
+				sans-serif,
+			),
+			weight: 600,
+			style: normal,
+			font-face: (
+				family: "Mulish",
+				path: "Mulish-SemiBold",
 				formats: (
 					woff2,
 				),
@@ -36,15 +52,15 @@ $base-font-stack: (
 		),
 		bold: (
 			family: (
-				"Brandon Text",
+				"Mulish",
 				arial,
 				sans-serif,
 			),
-			weight: 700,
+			weight: bold,
 			style: normal,
 			font-face: (
-				family: "Brandon Text",
-				path: "BrandonText-Bold",
+				family: "Mulish",
+				path: "Mulish-Bold",
 				formats: (
 					woff2,
 				),

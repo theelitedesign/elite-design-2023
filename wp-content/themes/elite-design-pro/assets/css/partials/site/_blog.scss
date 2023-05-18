@@ -1,0 +1,16 @@
+.story-article {
+	padding: 30px 0 70px 0;
+	border-bottom: 1px solid map-get($map: $colors, $key: white30);
+
+	&:nth-child(1) {
+		border-top: 1px solid map-get($map: $colors, $key: white30);
+	}
+
+	a,
+	a:visited {
+
+		&:hover {
+			color: map-get($map: $colors, $key: yellow);
+		}
+	}
+}

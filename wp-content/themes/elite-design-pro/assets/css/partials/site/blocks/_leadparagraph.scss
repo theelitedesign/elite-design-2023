@@ -1,8 +1,19 @@
 .leadparagraph_ctn {
-	max-width: 862px;
+	max-width: 1100px;
 	margin: 0 auto;
 
 	p:last-child {
 		margin-bottom: 0;
+	}
+}
+
+.lead-text {
+
+	span {
+		color: map-get($map: $colors, $key: white50);
+
+		&.active {
+			color: map-get($map: $colors, $key: white);
+		}
 	}
 }

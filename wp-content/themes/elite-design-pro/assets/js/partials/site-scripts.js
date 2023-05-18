@@ -84,6 +84,63 @@ jQuery( document ).ready( function( jQuery ) {
 
 	/**
 	 *
+	 * Lead paragraph large
+	 *
+	 */
+
+	const leadParagraphCTN = document.querySelectorAll( '.lead-para-ctn' );
+
+	leadParagraphCTN.forEach( function( item, index ) {
+		if ( jQuery( ' span.span-1' ).length > 0 ) {
+			gsap.to( ' span.span-1', {
+				scrollTrigger: {
+					trigger: item,
+					start: 'top center',
+					endTrigger: item,
+					end: '33% center',
+					scrub: true,
+
+					pin: false,
+					 onEnter: () => jQuery( ' span.span-1' ).addClass( 'active' ),
+					onLeaveBack: () => jQuery( ' span.span-1' ).removeClass( 'active' ),
+				},
+				duration: 1,
+			} );
+		}
+		if ( jQuery( ' span.span-2' ).length > 0 ) {
+			gsap.to( ' span.span-2', {
+				scrollTrigger: {
+					trigger: item,
+					start: '33.01% center',
+					endTrigger: item,
+					end: '66% center',
+					scrub: true,
+					pin: false,
+					 onEnter: () => jQuery( ' span.span-2' ).addClass( 'active' ),
+					onLeaveBack: () => jQuery( ' span.span-2' ).removeClass( 'active' ),
+				},
+				duration: 1,
+			} );
+		}
+		if ( jQuery( ' span.span-3' ).length > 0 ) {
+			gsap.to( ' span.span-3', {
+				scrollTrigger: {
+					trigger: item,
+					start: '66.01% center',
+					endTrigger: item,
+					end: '100% center',
+					scrub: true,
+					pin: false,
+					 onEnter: () => jQuery( ' span.span-3' ).addClass( 'active' ),
+					onLeaveBack: () => jQuery( ' span.span-3' ).removeClass( 'active' ),
+				},
+				duration: 1,
+			} );
+		}
+	} );
+
+	/**
+	 *
 	 * Video
 	 *
 	 */
@@ -205,7 +262,7 @@ jQuery( document ).ready( function( jQuery ) {
 	 */
 
 	if ( jQuery( window ).width() >= 748 ) {
-		//Create new scrollmagic controller
+		// //Create new scrollmagic controller
 		const controller = new ScrollMagic.Controller();
 
 		//Create horizontal scroll slide gsap function
@@ -221,5 +278,17 @@ jQuery( document ).ready( function( jQuery ) {
 			.setPin( '.horizontal-scroll-container' )
 			.setTween( horizontalSlide )
 			.addTo( controller );
+
+		gsap.to( '.js-white-ctn', {
+			scrollTrigger: {
+				trigger: 'body',
+				start: 'top-=1000 top',
+				end: 'top-=1000 top+=100',
+				onEnter: () => jQuery( 'body' ).addClass( 'white-body' ),
+				onLeaveBack: () => jQuery( 'body' ).removeClass( 'white-body' ),
+			},
+			duration: 1,
+			ease: 'none',
+		} );
 	}
 } );
