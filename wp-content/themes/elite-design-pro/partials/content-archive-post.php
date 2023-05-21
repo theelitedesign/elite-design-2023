@@ -8,11 +8,11 @@
  * @since 1.0.0
  */
 
-?> 
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("post-box column"); ?>>
 	<div class="post-box-img post-image">
-		<a href="<?php the_permalink(); ?>"> 
+		<a href="<?php the_permalink(); ?>">
 		<?php if ( has_post_thumbnail() ) { ?> <div class="post-featured-thumb">
 			 <?php the_post_thumbnail(
 								'thumb_600',

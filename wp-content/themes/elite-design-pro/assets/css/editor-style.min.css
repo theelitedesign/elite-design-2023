@@ -2025,6 +2025,46 @@ Mixin for transition
 .acf-block-preview .hero__buttons {
   margin-top: 50px;
 }
+.acf-block-preview .hero-home-title-row {
+  font-size: 250px;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 80%;
+  font-weight: 600;
+}
+.acf-block-preview .hero-home-title-row:nth-child(2) {
+  text-align: right;
+  float: right;
+}
+.acf-block-preview .hero-home-ctn .wrapper {
+  max-width: 1920px;
+  width: 95%;
+  display: flow-root;
+}
+.acf-block-preview .text__first-bg,
+.acf-block-preview .text__second-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+}
+.acf-block-preview .text__first-bg {
+  background-color: #5fbff9;
+}
+.acf-block-preview .text__second-bg {
+  background-color: #f06543;
+}
 .acf-block-preview .footer-logo {
   line-height: 0.65;
   margin-bottom: 9.5rem;
@@ -2188,24 +2228,11 @@ Mixin for transition
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.acf-block-preview .at-right-section .inner-wrapper,
-.acf-block-preview .at-right-section .wrapper {
-  padding-left: 200px;
-}
-.acf-block-preview .at-left-section .inner-wrapper,
-.acf-block-preview .at-left-section .wrapper {
-  padding-right: 200px;
-}
 .acf-block-preview .ctn-1000 .wrapper {
   max-width: 1000px;
 }
 .acf-block-preview .ctn-760 .wrapper {
   max-width: 760px;
-}
-.acf-block-preview .ctn {
-  padding: 86px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 .acf-block-preview .overflow-hidden {
   overflow-x: hidden;
@@ -2601,7 +2628,7 @@ Mixin for transition
   display: inline-block;
   border-radius: 100px;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: bold;
 }
 .acf-block-preview .tag.aqua {
   background-color: #00f0ff;
@@ -2662,6 +2689,9 @@ Mixin for transition
 .acf-block-preview .floating-ctn a:visited:hover {
   color: #ebfe00;
 }
+.acf-block-preview .hide {
+  display: none;
+}
 .acf-block-preview .story-article {
   padding: 30px 0 70px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -2669,8 +2699,8 @@ Mixin for transition
 .acf-block-preview .story-article:nth-child(1) {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
-.acf-block-preview .story-article a:hover,
-.acf-block-preview .story-article a:visited:hover {
+.acf-block-preview .story-article a.artile-title:hover,
+.acf-block-preview .story-article a.artile-title:visited:hover {
   color: #ebfe00;
 }
 .acf-block-preview .leadparagraph_ctn {
@@ -2679,6 +2709,10 @@ Mixin for transition
 }
 .acf-block-preview .leadparagraph_ctn p:last-child {
   margin-bottom: 0;
+}
+.acf-block-preview .lead-text {
+  font-size: 64px;
+  font-weight: 600;
 }
 .acf-block-preview .lead-text span {
   color: rgba(255, 255, 255, 0.5);
@@ -2937,7 +2971,6 @@ Mixin for transition
   opacity: 0.6;
 }
 .acf-block-preview .single-testi {
-  max-width: 1055px;
   padding: 0 0 0 18px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2945,25 +2978,26 @@ Mixin for transition
 .acf-block-preview .owl-carousel.testi-ctn .owl-nav {
   text-align: left;
   margin-top: 60px;
-  padding-left: 18px;
 }
 .acf-block-preview .owl-carousel.testi-ctn .owl-nav button[type=button] {
-  width: 60px;
+  width: 90px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 100px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   margin: 0 10px 0 0;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   background-image: url(../img/white-long-arrow.svg);
-  background-size: 25px;
+  background-size: 30px;
   opacity: 1 !important;
 }
 .acf-block-preview .owl-carousel.testi-ctn .owl-nav button[type=button]:hover {
   background-color: #fff;
+  border-color: #fff;
+  background-image: url(../img/black-long-arrow.svg);
 }
 .acf-block-preview .owl-carousel.testi-ctn .owl-nav button.owl-next {
   -webkit-transform: rotate(0deg);
@@ -2982,6 +3016,7 @@ Mixin for transition
   margin-bottom: 0;
   border-radius: 0;
   background-color: none;
+  background-color: transparent;
 }
 .acf-block-preview .cta-ctn.large-heading-ctn .owl-stage {
   display: -webkit-box;
@@ -2998,7 +3033,7 @@ Mixin for transition
   max-width: 1920px;
   font-size: 400px;
   text-transform: uppercase;
-  opacity: 0.2;
+  opacity: 0.5;
   color: transparent;
   line-height: 1.1;
   position: absolute;

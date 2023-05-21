@@ -44,20 +44,16 @@ if($block['name']){
 $elitedesign_tmmmbrs_title = $block_fields['elitedesign_tmmmbrs_title'];
 $elitedesign_tmmmbrs_sl_vari = $block_fields['elitedesign_tmmmbrs_sl_vari'];
 $elitedesign_tmmmbrs_select = $block_fields['elitedesign_tmmmbrs_select'];
-$elitedesign_tmmmbrs_text = $block_fields['elitedesign_tmmmbrs_text'];
-$elitedesign_tmmmbrs_btn1 = $block_fields['elitedesign_tmmmbrs_btn1'];
-$elitedesign_tmmmbrs_btn2 = $block_fields['elitedesign_tmmmbrs_btn2'];
-
-
-
-
-
 ?>
 <div id="<?php echo $id; ?>" class="<?php echo $align_class . ' ' . $class_name. ' ' . $name; ?> glide-block-<?php echo $block_glide_name; ?>">
 
 
-	<?php if($elitedesign_tmmmbrs_sl_vari == "columns") { ?>
+	<?php if($elitedesign_tmmmbrs_sl_vari == "simple") {
+		$elitedesign_tmmmbrs_text = $block_fields['elitedesign_tmmmbrs_text'];
+		$elitedesign_tmmmbrs_btn1 = $block_fields['elitedesign_tmmmbrs_btn1'];
+		$elitedesign_tmmmbrs_btn2 = $block_fields['elitedesign_tmmmbrs_btn2'];
 
+		?>
 			<div class="wrapper">
 				<div class="team-ctn team-blk flex">
 					<div class="team-blk-images col-50 blue-bg rd-10">
@@ -117,9 +113,9 @@ $elitedesign_tmmmbrs_btn2 = $block_fields['elitedesign_tmmmbrs_btn2'];
 		<?php } else { ?>
 
 			<div class="wrapper">
-				<div class="section-head mb-50">
+				<!-- <div class="section-head mb-50">
 					<h2>Some awesome cleints</h2>
-				</div>
+				</div> -->
 				<div class="team-members-area three-cols flexarea cleints-area">
 
 						<?php

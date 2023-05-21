@@ -11,21 +11,21 @@
 	box-sizing: border-box;
 }
 
-.at-right-section {
+// .at-right-section {
 
-	.inner-wrapper,
-	.wrapper {
-		padding-left: 200px;
-	}
-}
+// 	.inner-wrapper,
+// 	.wrapper {
+// 		padding-left: 200px;
+// 	}
+// }
 
-.at-left-section {
+// .at-left-section {
 
-	.inner-wrapper,
-	.wrapper {
-		padding-right: 200px;
-	}
-}
+// 	.inner-wrapper,
+// 	.wrapper {
+// 		padding-right: 200px;
+// 	}
+// }
 
 .ctn-1000 {
 
@@ -39,11 +39,6 @@
 	.wrapper {
 		max-width: 760px;
 	}
-}
-
-.ctn {
-
-	@include padding(86px 0);
 }
 
 .overflow-hidden {

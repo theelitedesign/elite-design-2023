@@ -392,7 +392,7 @@ a.wp-block-button__link:visited,
 	border-radius: 100px;
 	margin-bottom: 20px;
 
-	@include font(mu, sbold, weight);
+	@include font(mu, bold, weight);
 
 	&.aqua {
 		background-color: map-get($map: $colors, $key: aqua);
@@ -487,4 +487,8 @@ main#main-section {
 			color: map-get($map: $colors, $key: yellow);
 		}
 	}
+}
+
+.hide {
+	display: none;
 }

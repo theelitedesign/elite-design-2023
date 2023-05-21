@@ -26,7 +26,6 @@ $elitedesign_dflt_hero_btn_one = (isset($fields['elitedesign_dflt_hero_btn_one']
 if(!$elitedesign_dflt_hero_title){
 	$elitedesign_dflt_hero_title = get_the_title();
 }
-
 ?>
 
 	<!-- Hero Start -->
@@ -37,7 +36,14 @@ if(!$elitedesign_dflt_hero_title){
 					<div class="overline">Toolkit page</div>
 					<h1><?php echo $elitedesign_dflt_hero_title; ?></h1>
 					<p><?php echo $elitedesign_dflt_hero_text; ?></p>
-					<a href="<?php echo $elitedesign_dflt_hero_btn_one['url']; ?>" target="<?php echo $elitedesign_dflt_hero_btn_one['target']; ?>" class="button"><?php echo $elitedesign_dflt_hero_btn_one['title']; ?></a>
+
+					<?php if($elitedesign_dflt_hero_btn_one) {
+						$url = (isset($elitedesign_dflt_hero_btn_one['url'])) ? $elitedesign_dflt_hero_btn_one['url'] : null;
+						$title = (isset($elitedesign_dflt_hero_btn_one['title'])) ? $elitedesign_dflt_hero_btn_one['title'] : null;
+						$target = (isset($elitedesign_dflt_hero_btn_one['target'])) ? $elitedesign_dflt_hero_btn_one['target'] : null;
+						?>
+					<a href="<?php echo $url; ?>" target="<?php echo $target; ?>" class="button"><?php echo $title; ?></a>
+					<?php } ?>
 
 				</div>
 			</div>

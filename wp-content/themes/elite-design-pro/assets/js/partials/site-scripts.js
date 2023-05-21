@@ -183,6 +183,7 @@ jQuery( document ).ready( function( jQuery ) {
 		nav: true,
 		dots: false,
 		margin: 0,
+		autoHeight: true,
 		responsive: {
 			0: {
 				items: 1,
@@ -263,29 +264,63 @@ jQuery( document ).ready( function( jQuery ) {
 
 	if ( jQuery( window ).width() >= 748 ) {
 		// //Create new scrollmagic controller
-		const controller = new ScrollMagic.Controller();
+		if ( jQuery( '.horizontal-scroll-container' ).length ) {
+			const controller = new ScrollMagic.Controller();
 
-		//Create horizontal scroll slide gsap function
-		const horizontalSlide = new TimelineMax()
-			.to( '.horizontal-scroll', 3, { x: '-65%' } ); //Depends on the final width you want to scroll.
+			//Create horizontal scroll slide gsap function
+			const horizontalSlide = new TimelineMax()
+				.to( '.horizontal-scroll', 3, { x: '-30%' } ); //Depends on the final width you want to scroll.
 
-		// Create scrollmagic scene to pin and link horzontal scroll animation
-		new ScrollMagic.Scene( {
-			triggerElement: '.horizontal-scroll-container', //Div that will trigger the animation.
-			triggerHook: 'onLeave', //The animation will start on leaving the .horizontal-scroll-container section.
-			duration: '200%', //Scroll Duration, the amount of pixels you want to scroll to see the entire animation.
-		} )
-			.setPin( '.horizontal-scroll-container' )
-			.setTween( horizontalSlide )
-			.addTo( controller );
+			// Create scrollmagic scene to pin and link horzontal scroll animation
+			new ScrollMagic.Scene( {
+				triggerElement: '.horizontal-scroll-container', //Div that will trigger the animation.
+				triggerHook: 'onLeave', //The animation will start on leaving the .horizontal-scroll-container section.
+				duration: '200%', //Scroll Duration, the amount of pixels you want to scroll to see the entire animation.
+			} )
+				.setPin( '.horizontal-scroll-container' )
+				.setTween( horizontalSlide )
+				.addTo( controller );
+		}
+	}
+	if ( jQuery( '.hero-home-ctn' ).length ) {
+		window.onload = function() {
+			const tl = new TimelineLite( { delay: 1 } ),
+				firstBg = document.querySelectorAll( '.text__first-bg' ),
+				secBg = document.querySelectorAll( '.text__second-bg' ),
+				word = document.querySelectorAll( '.text__word' );
 
-		gsap.to( '.js-white-ctn', {
+			tl
+				.to( firstBg, 0.2, { scaleX: 1 } )
+				.to( secBg, 0.2, { scaleX: 1 } )
+				.to( word, 0.1, { opacity: 1 }, '-=0.1' )
+				.to( firstBg, 0.2, { scaleX: 0 } )
+				.to( secBg, 0.2, { scaleX: '0' } );
+		};
+	}
+	if ( jQuery( '.blog-teaser-ctn' ).length ) {
+		gsap.to( '.white-ctn', {
 			scrollTrigger: {
-				trigger: 'body',
-				start: 'top-=1000 top',
-				end: 'top-=1000 top+=100',
-				onEnter: () => jQuery( 'body' ).addClass( 'white-body' ),
-				onLeaveBack: () => jQuery( 'body' ).removeClass( 'white-body' ),
+				trigger: '.js-white-ctn',
+				scrub: true,
+				start: 'top 60%',
+				end: 'bottom 38%',
+				onEnter: () => jQuery( 'body' ).addClass( 'white-body-active' ),
+				onLeaveBack: () => jQuery( 'body' ).removeClass( 'white-body-active' ),
+				// markers: true,
+			},
+			duration: 1,
+			ease: 'none',
+		} );
+
+		gsap.to( '.black-ctn', {
+			scrollTrigger: {
+				trigger: '.js-black-ctn',
+				scrub: true,
+				start: 'top 0',
+				end: 'bottom 38%',
+				onEnter: () => jQuery( 'body' ).removeClass( 'white-body-active' ),
+				onLeaveBack: () => jQuery( 'body' ).addClass( 'white-body-active' ),
+				// markers: true,
 			},
 			duration: 1,
 			ease: 'none',

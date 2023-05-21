@@ -47,34 +47,27 @@ if($block['name']){
 $elitedesign_ldpar_kicker_text = html_entity_decode($block_fields['elitedesign_ldpar_kicker_text']);
 
 // Repeater
-$elitedesign_ldpar_rept = $block_fields['elitedesign_ldpar_rept'];
-
+$elitedesign_ldpar_rept =(isset($block_fields['elitedesign_ldpar_rept'])) ? $block_fields['elitedesign_ldpar_rept'] : null ;
 ?>
 <div id="<?php echo $id; ?>" class="<?php echo $align_class . ' ' . $class_name. ' ' . $name; ?> glide-block-<?php echo $block_glide_name; ?>">
 
-<section class="at-right-section ctn">
-			<div class="wrapper">
+	<section class="at-right-section ctn">
+		<div class="wrapper">
 			<div class="lead-para-ctn">
-					<div class="lead-text heading-3">
-
-			<?php if($elitedesign_ldpar_rept){
-                $key=0;
-			foreach( $elitedesign_ldpar_rept as $elitedesign_ldpar_rep ) {
-				$key++;
-				$text = $elitedesign_ldpar_rep['elitedesign_ldpar_text']; ?>
-
-
-						<span class="span-<?php echo $key ?> <?php if($key==1){ echo"active"; }?>">
-						<?php echo $text; ?>
-
-						</span>
-
-
-
-				<?php }} ?>
-				</div>
+				<div class="lead-text">
+					<?php if($elitedesign_ldpar_rept){
+						$key=0;
+						foreach( $elitedesign_ldpar_rept as $elitedesign_ldpar_rep ) {
+							$key++;
+							$text = $elitedesign_ldpar_rep['elitedesign_ldpar_text']; ?>
+							<span class="span-<?php echo $key ?> <?php if($key==1){ echo"active"; }?>">
+								<?php echo $text; ?>
+							</span>
+						<?php }
+					} ?>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
 </div>

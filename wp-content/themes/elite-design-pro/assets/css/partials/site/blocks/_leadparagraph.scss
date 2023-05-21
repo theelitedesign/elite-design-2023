@@ -8,6 +8,9 @@
 }
 
 .lead-text {
+	font-size: 64px;
+
+	@include font(mu,sbold,weight);
 
 	span {
 		color: map-get($map: $colors, $key: white50);

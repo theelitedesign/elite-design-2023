@@ -6,8 +6,8 @@
 		border-top: 1px solid map-get($map: $colors, $key: white30);
 	}
 
-	a,
-	a:visited {
+	a.artile-title,
+	a.artile-title:visited {
 
 		&:hover {
 			color: map-get($map: $colors, $key: yellow);

@@ -20,34 +20,27 @@ global $option_fields;
 global $pID;
 global $fields;
 
-$elitedesign_pagetitle = (isset($fields['elite_thherot_kiker']) && $fields['elite_thherot_kiker']!='' ) ? $fields['elite_thherot_kiker'] : get_the_title();
-$elite_thherot_txt = (isset($fields['elite_thherot_txt']) && $fields['elite_thherot_txt']!='' ) ? $fields['elite_thherot_txt'] : null;
-$elite_thherot_btnone = (isset($fields['elite_thherot_btnone']) && $fields['elite_thherot_btnone']!='' ) ? $fields['elite_thherot_btnone'] : null;
-$elite_thherot_btntwo = (isset($fields['elite_thherot_btntwo']) && $fields['elite_thherot_btntwo']!='' ) ? $fields['elite_thherot_btntwo'] : null;
+$elite_tthherot_tleon = (isset($fields['elite_tthherot_tleon']) && $fields['elite_tthherot_tleon']!='' ) ? $fields['elite_tthherot_tleon'] : null;
+$elite_tthherot_tletw = (isset($fields['elite_tthherot_tletw']) && $fields['elite_tthherot_tletw']!='' ) ? $fields['elite_tthherot_tletw'] : null;
 
 
-?> <section id="hero-section" class="hero-section">
+
+?> <section id="hero-section" class="hero-section at-right-section">
 	<!-- Hero Start -->
-		<div class="hero hero-ctn hero--home">
+			<h1 class="hide"></h1>
+			<div class="hero-ctn hero-home-ctn">
 				<div class="wrapper">
-					<div class="hero__content">
-
-						<div class="overline"><?php echo $elitedesign_pagetitle; ?></div>
-							<?php if($elite_thherot_txt){ ?>
-						<h1><?php echo esc_html($elite_thherot_txt);?></h1>
-								<?php } ?>
-						<div class="hero__buttons">
-						<?php
-							if( $elite_thherot_btnone ) :
-								echo glide_acf_button( $elite_thherot_btnone, 'button big' );
-							endif;
-						?>
-						<?php
-							if( $elite_thherot_btntwo ) :
-								echo glide_acf_button( $elite_thherot_btntwo, 'button big' );
-							endif;
-						?>
-						</div>
+					<div class="hero-home-title-row hero-home-title-row-one">
+						<div class="text__first-bg"></div>
+						<?php if($elite_tthherot_tleon){?>
+							<div class="hero-home-title-row-inner text__word">
+								<?php echo $elite_tthherot_tleon; ?>
+							</div>
+						<?php } ?>
+					</div>
+					<div class="hero-home-title-row hero-home-title-row-two">
+						<div class="text__second-bg"></div>
+						<?php if($elite_tthherot_tletw){?><div class="hero-home-title-row-inner text__word"><?php echo $elite_tthherot_tletw; ?></div><?php } ?>
 					</div>
 				</div>
 			</div>

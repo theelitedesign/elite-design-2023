@@ -10,8 +10,10 @@
 	margin-bottom: 0;
 	border-radius: 0;
 	background-color: none;
-	.owl-stage{
-		display:flex;
+	background-color: transparent;
+
+	.owl-stage {
+		display: flex;
 	}
 }
 
@@ -26,14 +28,14 @@
 	max-width: 1920px;
 	font-size: 400px;
 	text-transform: uppercase;
-	opacity: 0.2;
+	opacity: 0.5;
 	color: transparent;
 	line-height: 1.1;
 	position: absolute;
 	bottom: 0;
 	white-space: nowrap;
 	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: map-get( $map: $colors, $key: white );
+	-webkit-text-stroke-color: map-get($map: $colors, $key: white);
 }
 
 .cta-content-area {
@@ -45,34 +47,41 @@
 
 	@include padding(70px 160px);
 	text-align: center;
-	background-color: rgba(255,255,255,0.04);
+	background-color: rgba(255, 255, 255, 0.04);
+
 	@include border-radius(20px);
+
 	h2 {
-		color: map-get( $map: $colors, $key: white );
+		color: map-get($map: $colors, $key: white);
 		margin-bottom: 50px;
 	}
 }
 
 .cta-ctn {
 	background-color: rgba(255, 255, 255, 0.04);
+
 	@include border-radius(20px);
 }
 
 .job-cta {
 	background-color: map-get($map: $colors, $key: white);
 	color: map-get($map: $colors, $key: black);
+
 	@include border-radius(20px);
 	width: 100%;
 	padding: 80px;
 	box-sizing: border-box;
+
 	p {
 		max-width: 80%;
 		margin: 0 auto 30px;
 	}
+
 	a.button,
 	a.button:visited {
 		border-color: map-get($map: $colors, $key: black);
 		color: map-get($map: $colors, $key: black);
+
 		&:hover {
 			color: map-get($map: $colors, $key: white);
 			background-color: map-get($map: $colors, $key: black);

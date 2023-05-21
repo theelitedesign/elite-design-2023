@@ -34,7 +34,7 @@ $elitedesign_pgecta_button = ( isset($fields['elitedesign_pgecta_button']) ) ? $
 ?>
  <section id="cta-section" class="cta-section">
 	<!-- cta Start -->
-		<?php if($elitedesign_pgecta_visibility) { ?>
+		<?php if($elitedesign_pgecta_visibility && $elitedesign_pgecta_title || $elitedesign_pgecta_button) { ?>
 			<div class="cta-ctn">
 				<div class="flex">
 					<?php if($elitedesign_pgecta_title) { ?>

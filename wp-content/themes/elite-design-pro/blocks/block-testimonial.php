@@ -41,23 +41,22 @@ if($block['name']){
 }
 
 // Block variables
-$elitedesign_blk_testi_title = html_entity_decode($block_fields['elitedesign_blk_testi_title']); 
+$elitedesign_blk_testi_title = html_entity_decode($block_fields['elitedesign_blk_testi_title']);
 
-$elitedesign_blk_slct_testi = $block_fields['elitedesign_blk_slct_testi']; 
+$elitedesign_blk_slct_testi = $block_fields['elitedesign_blk_slct_testi'];
 
 ?>
 
 <div id="<?php echo $id; ?>" class="<?php echo $align_class . ' ' . $class_name. ' ' . $name; ?> glide-block-<?php echo $block_glide_name; ?>">
-
+		<div class="ctn">
 		<div class="wrapper">
 			<div class="section-head mb-50 ma-900">
 				<?php if($elitedesign_blk_testi_title){ ?>
 					<h2><?php echo $elitedesign_blk_testi_title; ?></h2>
 				<?php } ?>
 			</div>
-
 			<div class="testi-ctn owl-carousel owl-theme">
-				<?php 
+				<?php
 					global $post;
 					$lp_select_posts = array();
 					$lp_select_posts = $block_fields['elitedesign_blk_slct_testi'];
@@ -92,12 +91,10 @@ $elitedesign_blk_slct_testi = $block_fields['elitedesign_blk_slct_testi'];
 										</div>
 									</div>
 								</div>
-
-							<?php 
-					
+							<?php
 					endforeach; endif; wp_reset_query();
 				?>
 			</div>
 		</div>
-
+	</div>
 </div>

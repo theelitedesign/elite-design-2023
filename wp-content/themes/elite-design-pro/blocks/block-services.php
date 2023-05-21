@@ -53,7 +53,6 @@ $elitedesign_blk_slct_serv = $block_fields['elitedesign_blk_slct_serv'];
 ?>
 
 <div id="<?php echo $id; ?>" class="<?php echo $align_class . ' ' . $class_name. ' ' . $name; ?> glide-block-<?php echo $block_glide_name; ?>">
-
 		<section class="lyellow-bg ctn">
 			<div class="wrapper">
 				<div class="section-head mb-70 have-button flex">
@@ -112,6 +111,5 @@ $elitedesign_blk_slct_serv = $block_fields['elitedesign_blk_slct_serv'];
 					?>
 				</div>
 		</section>
-
 
 </div>

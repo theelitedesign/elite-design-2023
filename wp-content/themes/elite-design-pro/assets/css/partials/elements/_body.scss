@@ -22,6 +22,7 @@ body {
 	background-color: map-get($map: $colors, $key: black);
 	color: map-get($map: $colors, $key: white);
 	line-height: 1.6;
+	transition: all 0.3s ease-in-out;
 
 	&::before {
 		content: "";
@@ -40,9 +41,85 @@ body {
 
 p {
 	margin: 0 0 3rem;
+	opacity: 0.7;
 }
 
 ::selection {
 	color: map-get($map: $colors, $key: black);
 	background-color: map-get($map: $colors, $key: yellow);
+}
+
+
+.white-body-active {
+
+	background-color: map-get($map: $colors, $key: white);
+	color: map-get($map: $colors, $key: black);
+
+
+	a,
+	&:visited,
+	a.artile-title {
+		color: map-get($map: $colors, $key: black);
+		border-bottom: 1px solid transparent;
+	}
+
+
+	.story-article {
+		border-bottom: 1px solid map-get($map: $colors, $key: black60);
+
+		a.artile-title,
+		a.artile-title:visited {
+
+			&:hover {
+				color: map-get($map: $colors, $key: red);
+			}
+		}
+
+		&:nth-child(1) {
+			border-top: 1px solid map-get($map: $colors, $key: black60);
+		}
+	}
+
+	&::before {
+		display: none;
+	}
+
+	.owl-carousel.testi-ctn {
+
+
+		.owl-nav {
+
+			button[type="button"] {
+				border: 1px solid  map-get($map: $colors, $key: black60);
+				background-image: url(../img/black-long-arrow.svg);
+
+				&:hover {
+					background-color: map-get($map: $colors, $key: black);
+					border-color: map-get($map: $colors, $key: black);
+					background-image: url(../img/white-long-arrow.svg);
+				}
+			}
+		}
+	}
+
+	.tag {
+		color: map-get($map: $colors, $key: white);
+	}
+
+	a.button,
+	a.button:visited {
+		color: map-get($map: $colors, $key: black);
+		border: 2px solid map-get($map: $colors, $key: black60);
+
+		&:hover {
+			background-color: map-get($map: $colors, $key: black);
+			border-color: map-get($map: $colors, $key: black);
+			color: map-get($map: $colors, $key: white);
+		}
+	}
+
+
+	.cta-bottom-text {
+		-webkit-text-stroke-color: map-get($map: $colors, $key: black);
+	}
 }

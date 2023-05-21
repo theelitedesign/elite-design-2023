@@ -1,8 +1,8 @@
 <?php
 /**
- * Block Name: Large CTA
+ * Block Name: informer
  *
- * The template for displaying the custom gutenberg block named Large CTA.
+ * The template for displaying the custom gutenberg block named informer.
  *
  * @link https://www.advancedcustomfields.com/resources/blocks/
  *
@@ -40,59 +40,23 @@ if($block['name']){
 	$name = 'block-' .  $block_name;
 }
 
-// Block variables
+// // Block variables
+// $custom_field_of_block = html_entity_decode($block_fields['custom_field_of_block']); // for keeping html from input
 
-
-// CTA Title
-$elitedesign_lrg_cta_title = html_entity_decode($block_fields['elitedesign_lrg_cta_title']);
-
-// CTA Button
-$elitedesign_lrg_cta_button = $block_fields['elitedesign_lrg_cta_button'];
-
-// CTA Text Repeater
-$elitedesign_lrg_cta_text_area = $block_fields['elitedesign_lrg_cta_text_area'];
+// $custom_field_of_block = html_entity_remove($block_fields['custom_field_of_block']); // for removing html from input
 
 ?>
+
 <div id="<?php echo $id; ?>" class="<?php echo $align_class . ' ' . $class_name. ' ' . $name; ?> glide-block-<?php echo $block_glide_name; ?>">
 
-		<section>
-			<div class="cta-ctn large-heading-ctn">
-				<div class="cta-content-area">
-
-						<?php if($elitedesign_lrg_cta_title) { ?>
-
-							<div class="cta-title large-cta-title"><?php echo $elitedesign_lrg_cta_title; ?></div>
-
-						<?php } ?>
-
-						<?php if( $elitedesign_lrg_cta_button ) {
-
-							echo glide_acf_button( $elitedesign_lrg_cta_button, 'button big' );
-
-						} ?>
-
-				</div>
-
-				<?php if($elitedesign_lrg_cta_text_area) { ?>
-
-						<div class="cta-bottom-text owl-carousel owl-theme">
-
-						<?php
-
-							foreach ($elitedesign_lrg_cta_text_area as $single_word) {
-
-								$single_word = $single_word['word'];
-
-							if($single_word) { ?>
-
-								<div class="item large-text-item"><?php echo $single_word; ?></div>
-
-							<?php } }?>
-
-						</div>
-
-				<?php } ?>
+		<section class="blue-ctn at-right-section">
+			<div class="s-20"></div>
+			<div class="floating-ctn inner-wrapper">
+				<h2 class="heading-4 mb-0">
+					<a href="#">Now hiring: view open positions</a>
+				</h2>
 			</div>
+			<div class="s-20"></div>
 		</section>
 
 </div>
